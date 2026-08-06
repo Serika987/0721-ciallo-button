@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#15141a" />
+    <link rel="icon" type="image/png" href="/images/icon.png" />
+    <title>神奇小按钮</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="grain"></div>
+    <main class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="神奇小按钮首页">
+          <img class="brand-icon" src="/images/icon.png" alt="" />
+          <span>神奇小按钮</span>
+        </a>
+        <div class="status"><span class="status-dot"></span>LIVE / SHARED STAGE</div>
+      </header>
+
+      <section class="hero">
+        <div class="eyebrow"><span>01</span> PRESS PLAY, LEAVE A TRACE</div>
+        <h1>Ciallo～(∠・ω- )⌒☆</h1>
+        <p class="intro">按下小人，留下你的来访记录（请注意音量）；<br class="desktop-only" />觉得好玩的话，欢迎多按几次。</p>
+        <div class="hero-note"><span class="note-line"></span><span>TURN UP YOUR VOLUME</span></div>
+      </section>
+
+      <section class="sound-grid" aria-label="音效选择">
+        <article class="sound-card orange" data-sound="only">
+          <button class="play-button image-play-button" type="button" aria-label="播放 0721 音效"></button>
+          <p class="visitor-rank" data-rank="only">你是第 1 个 0721 的人</p>
+        </article>
+
+        <article class="sound-card violet" data-sound="ciallo">
+          <button class="play-button image-play-button" type="button" aria-label="播放 Ciallo 音效"></button>
+          <p class="visitor-rank" data-rank="ciallo">你是第 1 个 Ciallo～(∠・ω- )⌒☆ 的人</p>
+        </article>
+        </section>
+
+        <section class="countdown" aria-label="距离下一个0721日的倒计时">
+          <div class="countdown-title">距0721日还有</div>
+          <div class="countdown-clock" aria-live="polite">
+            <div class="time-unit"><strong id="days-left">0</strong><span>天</span></div>
+            <div class="time-separator">:</div>
+            <div class="time-unit"><strong id="hours-left">00</strong><span>时</span></div>
+            <div class="time-separator">:</div>
+            <div class="time-unit"><strong id="seconds-left">00</strong><span>秒</span></div>
+          </div>
+        </section>
+  
+      <section class="stats" aria-label="实时统计">
+        <div class="stats-heading"><span>THE CROWD HAS SPOKEN</span><span class="live-pulse">● SYNCED LIVE</span></div>
+        <div class="stats-main"><div><strong id="total-count">0</strong><span>全站播放次数</span></div><div class="stats-caption">每一次播放都会被记住<br />数字来自此刻的所有来访者。</div></div>
+        <div class="stat-bars">
+          <div class="bar-row"><div class="bar-label"><span>0721</span><span id="only-count">0</span></div><div class="bar-track"><span id="only-bar"></span></div></div>
+          <div class="bar-row"><div class="bar-label"><span>CIALLO～</span><span id="ciallo-count">0</span></div><div class="bar-track"><span id="ciallo-bar"></span></div></div>
+        </div>
+      </section>
+
+      <footer><span>© 2026 SOUND STAGE</span><span>Made with Codex <b>✳</b></span><span>按下按钮开始</span></footer>
+    </main>
+    <div class="toast" role="status" aria-live="polite">声音已加入现场记录</div>
+    <script src="/app.js"></script>
+  </body>
+</html>

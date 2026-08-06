@@ -1,0 +1,9 @@
+{
+  "name": "0721-ciallo-button",
+  "version": "1.0.0",
+  "private": true,
+  "description": "A shared sound button stage with persistent counters.",
+  "scripts": {
+    "start": "node server.js"
+  }
+}
