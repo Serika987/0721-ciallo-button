@@ -63,9 +63,23 @@ function serveStatic(req, res) {
       '.mp3': 'audio/mpeg',
       '.jpg': 'image/jpeg',
       '.png': 'image/png',
+      '.webp': 'image/webp',
       '.svg': 'image/svg+xml'
     };
-    res.writeHead(200, { 'Content-Type': types[ext] || 'application/octet-stream' });
+    const cacheControls = {
+      '.html': 'no-cache',
+      '.css': 'public, max-age=86400',
+      '.js': 'public, max-age=86400',
+      '.mp3': 'public, max-age=2592000',
+      '.jpg': 'public, max-age=2592000',
+      '.png': 'public, max-age=2592000',
+      '.webp': 'public, max-age=2592000',
+      '.svg': 'public, max-age=2592000'
+    };
+    res.writeHead(200, {
+      'Content-Type': types[ext] || 'application/octet-stream',
+      'Cache-Control': cacheControls[ext] || 'public, max-age=86400'
+    });
     res.end(data);
   });
 }

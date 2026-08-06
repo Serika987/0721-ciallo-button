@@ -57,10 +57,10 @@ npm start
 │  │  ├─ 0721only.mp3
 │  │  └─ ciallo.mp3
 │  └─ images/
-│     ├─ background.jpg
-│     ├─ icon.png
-│     ├─ nene1.jpg / nene2.jpg
-│     └─ meguru1.jpg / meguru2.jpg
+│     ├─ background.webp
+│     ├─ icon.webp
+│     ├─ nene1.webp / nene2.webp
+│     └─ meguru1.webp / meguru2.webp
 ├─ package.json
 ├─ server.js               # Node.js 静态文件服务器与计数 API
 └─ README.md
@@ -99,9 +99,9 @@ POST /api/click/ciallo
 ## 修改素材
 
 - 修改音效：替换 `public/audio/` 中对应的 MP3 文件，并同步检查 `public/app.js` 中的路径。
-- 修改按钮默认图和按下图：替换 `public/images/nene1.jpg`、`nene2.jpg`、`meguru1.jpg`、`meguru2.jpg`。
-- 修改页面背景：替换 `public/images/background.jpg`。
-- 修改浏览器标签页和左上角图标：替换 `public/images/icon.png`。
+- 修改按钮默认图和按下图：替换 `public/images/nene1.webp`、`nene2.webp`、`meguru1.webp`、`meguru2.webp`。
+- 修改页面背景：替换 `public/images/background.webp`。
+- 修改浏览器标签页和左上角图标：替换 `public/images/icon.webp`。
 - 修改标题：编辑 `public/index.html` 中的 `<title>` 和页面 `<h1>`。
 
 ## 部署提示

@@ -5,8 +5,8 @@ const soundFiles = {
 
 const sounds = Object.fromEntries(Object.entries(soundFiles).map(([key, src]) => [key, new Audio(src)]));
 const buttonImages = {
-  only: ['/images/nene1.jpg', '/images/nene2.jpg'],
-  ciallo: ['/images/meguru1.jpg', '/images/meguru2.jpg']
+  only: ['/images/nene1.webp', '/images/nene2.webp'],
+  ciallo: ['/images/meguru1.webp', '/images/meguru2.webp']
 };
 
 // Preload both states so the pressed image is ready on the first click.
