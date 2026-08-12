@@ -15,6 +15,7 @@
 - 显示距离下一次 7 月 21 日 00:00 的天、时、秒倒计时。
 - 适配移动端，竖屏时两个按钮并排显示。
 - 使用本地字体，不依赖 Google Fonts 等外部网络资源。
+- 顶栏菜单可进入广西民族师范学院附属中学宣传单页（`/fuzhong/`），两页之间可互相跳转。
 
 ## 快速开始
 
@@ -61,6 +62,11 @@ npm start
 │     ├─ icon.webp
 │     ├─ nene1.webp / nene2.webp
 │     └─ meguru1.webp / meguru2.webp
+│  └─ fuzhong/                # 附中宣传子页（从主页顶栏菜单进入）
+│     ├─ index.html
+│     ├─ styles.css
+│     ├─ app.js
+│     └─ images/
 ├─ package.json
 ├─ server.js               # Node.js 静态文件服务器与计数 API
 ├─ redirect.js             # HTTP→HTTPS 301 重定向服务（用于 80 端口）

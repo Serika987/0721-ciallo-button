@@ -49,7 +49,7 @@ function sendJson(res, status, body) {
 
 function serveStatic(req, res) {
   const urlPath = decodeURIComponent(new URL(req.url, `http://${req.headers.host || 'localhost'}`).pathname);
-  const requested = urlPath === '/' ? '/index.html' : urlPath;
+  const requested = urlPath === '/' || urlPath.endsWith('/') ? urlPath + 'index.html' : urlPath;
   const filePath = path.normalize(path.join(PUBLIC_DIR, requested));
   if (!filePath.startsWith(PUBLIC_DIR)) return sendJson(res, 403, { error: 'Forbidden' });
 
