@@ -63,6 +63,7 @@ npm start
 │     └─ meguru1.webp / meguru2.webp
 ├─ package.json
 ├─ server.js               # Node.js 静态文件服务器与计数 API
+├─ redirect.js             # HTTP→HTTPS 301 重定向服务（用于 80 端口）
 └─ README.md
 ```
 
@@ -107,6 +108,16 @@ POST /api/click/ciallo
 ## 部署提示
 
 这是一个轻量的 Node.js 服务，部署时需要让服务器持续运行 `node server.js`，并将外部访问转发到对应端口。共享计数保存在服务器本地，因此部署平台必须提供可持久化的文件存储；如果平台会重置实例文件，计数也会被重置。
+
+### HTTP→HTTPS 重定向
+
+部分浏览器（或用户直接输入域名）会先以 `http://` 访问 80 端口。为让所有 HTTP 请求自动跳转到 HTTPS，额外运行 `redirect.js`（默认监听 7080 端口，可通过 `REDIRECT_PORT` 环境变量修改）：
+
+```powershell
+node redirect.js
+```
+
+它会对每个请求返回 `301` 并指向 `https://` 对应域名。内网穿透（如 mefrp）需将公网 80 端口映射到该服务的监听端口（7080），HTTPS（443）则映射到主服务 `server.js` 的端口（7210）。
 
 当前计数接口没有用户身份限制，任何能访问页面的人都可以提交点击。若公开部署，建议根据实际需要增加限流、来源校验或数据库存储。
 
