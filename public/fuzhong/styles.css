@@ -92,6 +92,14 @@ body { margin: 0; color: var(--ink); background: var(--paper) url("images/backgr
 footer { border-top: 1px solid var(--hairline); padding: 22px 36px 30px; margin-top: 28px; background: rgba(242, 238, 231, .87); color: #9b9492; display: flex; justify-content: space-between; gap: 12px; }
 .footer-motto { color: var(--orange); }
 
+/* ---------- poster ---------- */
+.poster { text-align: center; }
+.poster .section-head { margin: 0 auto 34px; }
+.poster .eyebrow { justify-content: center; }
+.poster-figure { margin: 0; }
+.poster-figure img { display: block; margin: 0 auto; max-width: 100%; max-height: 84vh; width: auto; height: auto; border: 1px solid var(--hairline); box-shadow: 0 30px 60px -34px rgba(23, 21, 27, .45); }
+.poster-figure figcaption { display: flex; justify-content: space-between; gap: 12px; padding: 12px 2px 0; color: #8b8482; text-shadow: 0 1px 0 rgba(255, 255, 255, .6); }
+
 /* ---------- reveal ---------- */
 .reveal { opacity: 0; transform: translateY(14px); transition: opacity .7s ease, transform .7s ease; }
 .reveal.visible { opacity: 1; transform: none; }
