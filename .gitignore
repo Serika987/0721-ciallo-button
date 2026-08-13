@@ -1,0 +1,14 @@
+# ===== 远程运维脚本（含 mefrp 令牌，切勿提交）=====
+fix_config.js
+merge_config.js
+mefrpc_config_*.toml
+
+# ===== Node =====
+node_modules/
+*.log
+npm-debug.log*
+
+# ===== 系统文件 =====
+.DS_Store
+Thumbs.db
+Desktop.ini
