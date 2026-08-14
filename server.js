@@ -172,7 +172,13 @@ function serveStatic(req, res) {
 }
 
 const server = http.createServer((req, res) => {
-  const url = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
+  // mefrp 等代理会转发异常请求行（如 req.url='//'），URL 解析失败会抛异常导致进程崩溃，必须兜底
+  let url;
+  try {
+    url = new URL(req.url, `http://${req.headers.host || 'localhost'}`);
+  } catch {
+    return sendJson(res, 400, { error: 'Bad request' });
+  }
 
   if (url.pathname === '/api/counts' && req.method === 'GET') {
     return sendJson(res, 200, counts);
