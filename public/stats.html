@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#15141a" />
+    <link rel="icon" type="image/webp" href="/images/icon.webp" />
+    <title>来访统计 · 神奇小按钮</title>
+    <link rel="stylesheet" href="/styles.css?v=2" />
+  </head>
+  <body>
+    <div class="grain"></div>
+    <main class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="/" aria-label="神奇小按钮首页">
+          <img class="brand-icon" src="/images/icon.webp" alt="" />
+          <span>神奇小按钮</span>
+        </a>
+        <nav class="site-nav" aria-label="站点导航">
+          <a class="nav-link" href="/">主页<span class="nav-arrow">←</span></a>
+          <a class="nav-link" href="/fuzhong/">附中主页<span class="nav-arrow">↗</span></a>
+        </nav>
+        <div class="status"><span class="status-dot"></span>VISITOR ANALYTICS</div>
+      </header>
+
+      <section class="hero">
+        <div class="eyebrow"><span>01</span> EVERY VISITOR LEAVES A TRACE</div>
+        <h1>来访统计</h1>
+        <p class="intro">全站浏览量与独立访客，<br class="desktop-only" />按天去重，最近 30 天趋势一目了然。</p>
+      </section>
+
+      <section class="stats">
+        <div class="stats-heading"><span>LIFETIME / TODAY</span><span class="live-pulse">● SYNCED LIVE</span></div>
+        <div class="kpi-grid">
+          <div class="kpi"><strong id="kpi-pv">0</strong><span>累计浏览量 PV</span></div>
+          <div class="kpi"><strong id="kpi-uv">0</strong><span>累计独立访客 UV</span></div>
+          <div class="kpi"><strong id="kpi-today-pv">0</strong><span>今日浏览量</span></div>
+          <div class="kpi"><strong id="kpi-today-uv">0</strong><span>今日独立访客</span></div>
+        </div>
+        <div class="stats-heading chart-heading"><span>LAST 30 DAYS</span><span>PV / UV</span></div>
+        <div class="chart-scroll">
+          <div class="day-chart" id="day-chart" role="img" aria-label="最近 30 天来访趋势柱状图"></div>
+        </div>
+        <div class="chart-empty" id="chart-empty" hidden>暂无数据</div>
+      </section>
+
+      <footer>
+        <span>© 2026 YUZU STAGE</span>
+        <a class="github-link" href="https://github.com/Serika987" target="_blank" rel="noreferrer">GitHub ↗</a>
+        <span>每一次打开都会被记住</span>
+      </footer>
+    </main>
+    <script src="/stats.js"></script>
+    <script src="/stats-page.js"></script>
+  </body>
+</html>

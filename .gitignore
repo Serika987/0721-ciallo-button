@@ -12,3 +12,6 @@ npm-debug.log*
 .DS_Store
 Thumbs.db
 Desktop.ini
+
+# ===== 线上运行数据（切勿提交 / 同步时跳过 data/）=====
+data/*.json
