@@ -247,6 +247,12 @@ const server = http.createServer((req, res) => {
     return sendJson(res, 200, { pv: visits.pv, uv: visits.uv, today, days });
   }
 
+  // 生日季已过（2233 生贺 2026-08-16），暂时隐藏生贺页；明年 8 月改回即可重新开放
+  if (url.pathname.startsWith('/birthday')) {
+    res.writeHead(302, { Location: '/', 'Cache-Control': 'no-store' });
+    return res.end();
+  }
+
   if (req.method === 'GET') return serveStatic(req, res);
   sendJson(res, 405, { error: 'Method not allowed' });
 });
